@@ -226,7 +226,7 @@ Code_text,label
 - `0` = Buggy code
 - `1` = Correct code
 
-## 🔧 Technical Details
+##  Technical Details
 
 ### Feature Extraction
 
@@ -290,7 +290,7 @@ Code_text,label
 - [ ] **Active Learning**: Improve model with user feedback
 - [ ] **IDE Integration**: Create plugins for VS Code, PyCharm
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Here's how you can help:
 
@@ -319,12 +319,13 @@ Ankit Jha - [LinkedIn](www.linkedin.com/in/connectwithankitjha) - connectwithank
 
 Project Link: [https://github.com/KaunAnkit/bug-detection-ml](https://github.com/KaunAnkit/bug-detection-ml)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Inspired by research in automated program repair and static analysis
 - TF-IDF implementation from scikit-learn
 - Code examples generated with assistance from AI tools
 
 ---
+
 
 **⚠️ Disclaimer**: This is a proof-of-concept project. The model should not be used as the sole method for bug detection in production systems. Always combine automated tools with manual code review and comprehensive testing.
