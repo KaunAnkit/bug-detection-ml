@@ -1,0 +1,299 @@
+Code_text,label
+"def calculate_sum(numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
+print(calculate_sum([1, 2, 3]))
+",1
+"def calculate_average(numbers):
+    if len(numbers) == 0:
+        return 0
+    return sum(numbers) / len(numbers)
+
+print(calculate_average([10, 20, 30]))
+",1
+"def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n-1)
+
+print(factorial(5))
+",1
+"class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    
+    def area(self):
+        return self.width * self.height
+
+r = Rectangle(5, 3)
+print(r.area())
+",1
+"def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+print(binary_search([1, 3, 5, 7, 9], 5))
+",1
+"def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+print(bubble_sort([64, 34, 25, 12, 22, 11, 90]))
+",1
+"def calculate_sum(numbers):
+    total = 0
+    for num in numbers
+        total += num
+    return total
+
+print(calculate_sum([1, 2, 3]))
+",0
+"def calculate_average(numbers):
+    return sum(numbers) / len(numbers)
+
+print(calculate_average([]))
+",0
+"def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n)
+
+print(factorial(5))
+",0
+"class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    
+    def area():
+        return self.width * self.height
+
+r = Rectangle(5, 3)
+print(r.area())
+",0
+"def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+print(binary_search([1, 3, 5, 7, 9]))
+",0
+"def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+print(bubble_sort([64, 34, 25, 12, 22, 11, 90]))
+",0
+"x = 10
+y = '20'
+print(x + y)
+",0
+"def divide(a, b):
+    return a / b
+
+print(divide(10, 0))
+",0
+"list1 = [1, 2, 3]
+print(list1[4])
+",0
+"for i in range(5)
+    print(i)
+",0
+"def greet(name):
+    print('Hello ' + name)
+
+greet()
+",0
+"try:
+    x = 1 / 0
+except ValueError:
+    print('Caught error')
+",0
+"def process_list(items):
+    return [item.upper() for item in items]
+
+process_list([1, 2, 3])
+",0
+"import non_existent_module
+
+print('Hello')
+",0
+"def recursive_function(n):
+    print(n)
+    recursive_function(n-1)
+
+recursive_function(5)
+",0
+"class MyClass:
+    def my_method(self):
+        return self.undefined_variable
+
+obj = MyClass()
+obj.my_method()
+",0
+"def process_data(data):
+    result = []
+    for item in data:
+        if item > 0:
+            result.append(item)
+    return result
+
+print(process_data([1, -2, 3, -4, 5]))
+",1
+"def is_palindrome(s):
+    s = s.lower()
+    return s == s[::-1]
+
+print(is_palindrome('radar'))
+",1
+"def merge_dicts(dict1, dict2):
+    return {**dict1, **dict2}
+
+print(merge_dicts({'a': 1}, {'b': 2}))
+",1
+"def filter_even_numbers(numbers):
+    return [num for num in numbers if num % 2 == 0]
+
+print(filter_even_numbers([1, 2, 3, 4, 5, 6]))
+",1
+"def count_vowels(text):
+    vowels = 'aeiou'
+    return sum(1 for char in text.lower() if char in vowels)
+
+print(count_vowels('Hello World'))
+",1
+"def process_data(data):
+    result = []
+    for item in data
+        if item > 0:
+            result.append(item)
+    return result
+
+print(process_data([1, -2, 3, -4, 5]))
+",0
+"def is_palindrome(s):
+    s = s.lower()
+    return s = s[::-1]
+
+print(is_palindrome('radar'))
+",0
+"def merge_dicts(dict1, dict2):
+    dict1.update(dict2)
+    return dict1
+
+print(merge_dicts({'a': 1}))
+",0
+"def filter_even_numbers(numbers):
+    return [num for num in numbers if num % 2 = 0]
+
+print(filter_even_numbers([1, 2, 3, 4, 5, 6]))
+",0
+"def count_vowels(text):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    count = 0
+    for char in text.lower():
+        if char in vowels:
+            count += 1
+    return count
+
+print(count_vowels())
+",0
+"def safe_divide(a, b):
+    if b == 0:
+        raise ValueError('Cannot divide by zero')
+    return a / b
+
+print(safe_divide(10, 2))
+",1
+"class BankAccount:
+    def __init__(self, balance=0):
+        self.balance = balance
+    
+    def withdraw(self, amount):
+        if amount > self.balance:
+            raise ValueError('Insufficient funds')
+        self.balance -= amount
+        return self.balance
+
+account = BankAccount(100)
+print(account.withdraw(50))
+",1
+"def find_max_min(numbers):
+    if not numbers:
+        return None, None
+    return max(numbers), min(numbers)
+
+print(find_max_min([1, 2, 3, 4, 5]))
+",1
+"def validate_username(username):
+    if not isinstance(username, str):
+        raise TypeError('Username must be a string')
+    return username.lower()
+
+print(validate_username('User123'))
+",1
+"def merge_sorted_lists(list1, list2):
+    if not all(isinstance(x, (int, float)) for x in list1 + list2):
+        raise TypeError('All elements must be numbers')
+    return sorted(list1 + list2)
+
+print(merge_sorted_lists([1, 3], [2, 4]))
+",1
+"def safe_divide(a, b):
+    return a / b
+
+print(safe_divide(10, 0))
+",0
+"class BankAccount:
+    def __init__(self, balance=0):
+        self.balance = balance
+    
+    def withdraw(self, amount):
+        self.balance -= amount
+        return self.balance
+
+account = BankAccount(100)
+print(account.withdraw(150))
+",0
+"def find_max_min(numbers):
+    return max(numbers), min(numbers)
+
+print(find_max_min([]))
+",0
+"def validate_username(username):
+    return username.lower()
+
+print(validate_username(123))
+",0
+"def merge_sorted_lists(list1, list2):
+    return sorted(list1 + list2)
+
+print(merge_sorted_lists(['1', '2'], [3, 4]))
+",0
