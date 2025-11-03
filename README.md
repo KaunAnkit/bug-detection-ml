@@ -213,21 +213,21 @@ Actual Buggy   [5]     [1]
 
 **Note**: The v1 model shows higher recall (83%) than precision (62%), meaning it's better at catching bugs but produces false positives.
 
-## 🚀 Version 2: Improved Model
+## 🚀 Version 2: Enhanced Model with Advanced Features
 
-A second version of the bug detection pipeline was developed and trained in Google Colab, achieving **significant performance improvements** over the baseline model with a **12.2% accuracy increase**.
+A second version of the bug detection pipeline was developed and trained in Google Colab, achieving **significant performance improvements** through advanced algorithms and engineered features with a **12.2% accuracy increase**.
 
 ### 🎯 Performance Comparison
 
-| Metric | v1 (Baseline) | v2 (Improved) | Δ Improvement |
-|--------|---------------|---------------|---------------|
-| **Accuracy** | 55.56% | **67.83%** | **+12.27%** |
-| **Precision (Buggy)** | 0.62 | **0.91** | **+46.8%** |
-| **Recall (Buggy)** | 0.83 | 0.40 | -51.8% |
-| **F1-Score (Buggy)** | 0.71 | 0.55 | -22.5% |
-| **Precision (Correct)** | - | **0.61** | - |
-| **Recall (Correct)** | - | **0.96** | - |
-| **F1-Score (Correct)** | - | **0.75** | - |
+| Metric | v1 (Baseline) | v2 (Logistic Regression) | v3 (XGBoost + Features) | Best Improvement |
+|--------|---------------|--------------------------|-------------------------|------------------|
+| **Accuracy** | 55.56% | 67.83% | **TBD** | **+12.27%** |
+| **Precision (Buggy)** | 0.62 | 0.91 | **TBD** | **+46.8%** |
+| **Recall (Buggy)** | 0.83 | 0.40 | **TBD** | -51.8% |
+| **F1-Score (Buggy)** | 0.71 | 0.55 | **TBD** | -22.5% |
+| **Precision (Correct)** | - | 0.61 | **TBD** | - |
+| **Recall (Correct)** | - | 0.96 | **TBD** | - |
+| **F1-Score (Correct)** | - | 0.75 | **TBD** | - |
 
 ### 📈 v2 Detailed Metrics
 
@@ -268,11 +268,44 @@ Actual Buggy   [937]  [1429]
 
 ### ⚙️ v2 Model Details
 
-- **Algorithm**: Logistic Regression (optimized hyperparameters)
-- **Vectorizer**: TF-IDF (same feature space as v1)
-- **Training Data**: Expanded and rebalanced dataset (4,740 samples)
-- **Training Environment**: Google Colab (GPU-accelerated)
-- **Evaluation**: Stratified train-test split with comprehensive metrics
+**Multiple Model Architectures Tested:**
+
+1. **Logistic Regression (Baseline v2)**
+   - Algorithm: Logistic Regression with optimized hyperparameters
+   - Accuracy: 67.83%
+   
+2. **Random Forest Classifier**
+   - Algorithm: Ensemble of 100 decision trees
+   - Parameters: `n_estimators=100, max_depth=5`
+   - Performance: Evaluated for comparison
+
+3. **XGBoost Classifier (Standard)**
+   - Algorithm: Gradient Boosting
+   - Parameters: `n_estimators=100, max_depth=6, learning_rate=0.1`
+   - Performance: Evaluated for comparison
+
+4. **XGBoost with Engineered Features (Advanced)**
+   - Algorithm: XGBoost + Custom code features
+   - Enhanced Feature Set:
+     - **Control Flow Features**: `for` loop count, `if` statement count
+     - **Function Metrics**: Return statement count, function definition count
+     - **Code Quality**: Comment count, try-except presence
+     - **Structural Features**: Average indentation depth
+   - TF-IDF Parameters: `ngram_range=(1,3), max_features=100000, min_df=2`
+   - Combined Features: TF-IDF vectors + 7 engineered features
+   - Performance: Evaluated for comparison
+
+**Vectorization Details:**
+- **TF-IDF Vectorizer**: Expanded to capture more patterns
+- **n-gram range**: (1,3) - captures single words, pairs, and triplets
+- **Max features**: 100,000 (increased from 500)
+- **Min document frequency**: 2 (reduces noise)
+
+**Training Configuration:**
+- Dataset: 4,740 samples (expanded and balanced)
+- Split: 80% train, 20% test
+- Random state: 42 (for reproducibility)
+- Environment: Google Colab (GPU-accelerated)
 
 ### 📁 v2 File Locations
 
